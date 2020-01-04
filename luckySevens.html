@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Name: Susana Ortega
+	 Date Created: 
+	 Most recent revision: 
+--> 
+
+<html lang="en"> 
+	<head>
+		<title> Lucky Sevens </title>
+		<script type="text/JavaScript" src="luckySevens.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<style>
+			header{
+				align-text: center;
+			}
+			caption{
+				font-weight: bold; 
+				font-size: 1.5em; 
+				margin-bottom: 8px;
+				text-align: center;
+			}
+			table, td{
+				border: 1px solid #0d1f2d; 
+				border-collapse: collapse; 
+				padding: 5px 10px;
+				text-align: left; 
+			}
+			table{
+				width: 0%; 
+				margin: auto; 
+			}
+			tr{
+				height: 30px; 
+			}
+			tr:nth-child(odd){
+				background-color: gray; 
+			}
+			tr:nth-child(even){
+				background-color: white;
+			}
+		</style>
+	</head>
+	
+	<body style="text-align: center"> 
+	<div class="container">
+		<header> 
+			<h1> Lucky Sevens </h1>
+		</header>
+		
+		<form name="luckySevensForm" onsubmit="return validateItems();" class="form-inline">
+			<div class="form-group">
+				<label for="bet"> Starting Bet: </label>
+				<input type="number" class="form-control" id="bet" style="width: 150px">
+			</div>
+			<br /><br />
+			<button type="submit" id="play" class="btn btn-default"> Play </button>
+		</form>
+		
+		<div id="results" style="display: none">
+			<table>
+				<caption> Results </caption>
+				<!--<thead>
+					<tr>
+					<th> Starting Bet: </th>
+					<th> $<span id="startingBet"></span> </th>
+					</tr>
+				</thead>-->
+				
+				<tbody>
+					<tr>
+					<td> Starting Bet: </td>
+					<td> $<span id="startingBet"></span> </td>
+					</tr>
+					
+					<tr>
+					<td> Total Rolls Before Going Broke: </td>
+					<td> <span id="rolls"></span> </td>
+					</tr>
+					
+					<tr>
+					<td> Highest Amount Won: </td>
+					<td> $<span id="playerMoney"></span> </td>
+					</tr>
+					
+					<tr>
+					<td> Roll Count at Highest Amount Won: </td>
+					<td> <span id="rollsPlayer"></span> </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</body>
+</html>
